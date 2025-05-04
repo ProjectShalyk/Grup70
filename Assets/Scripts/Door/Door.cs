@@ -5,11 +5,22 @@ public class Door : MonoBehaviour
     public DoorSwitch[] doorSwitches;
 
     SpriteRenderer _spriteRenderer;
+    bool _isOpen = false;
+
+
+    public float gateSpeed = 5f;
+    GameObject _gate;
+    Vector3 _gateStartPos;
+    Vector3 _gateEndPos;
 
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.color = Color.red;
+
+        _gate = transform.GetChild(0).gameObject;
+        _gateStartPos = _gate.transform.position;
+        _gateEndPos = _gateStartPos + new Vector3(0, 4, 0);
 
         for (int i = 0; i < doorSwitches.Length; i++)
         {
@@ -18,11 +29,21 @@ public class Door : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (_isOpen && _gate.transform.position != _gateEndPos)
+        {
+            Vector3 newPos = Vector3.Lerp(_gate.transform.position, _gateEndPos, gateSpeed * Time.deltaTime);
+            _gate.transform.position = newPos;
+        }
+        else if (!_isOpen && _gate.transform.position != _gateStartPos)
+        {
+            Vector3 newPos = Vector3.Lerp(_gate.transform.position, _gateStartPos, gateSpeed * Time.deltaTime);
+            _gate.transform.position = newPos;
+        }
 
     }
+
 
     public void CheckSwitches()
     {
@@ -37,10 +58,12 @@ public class Door : MonoBehaviour
                 count--;
             }
         }
-        float colorLerp = (float) (count / doorSwitches.Length); 
+        float colorLerp = (float)count / (float)doorSwitches.Length; 
 
-        _spriteRenderer.color = Color.Lerp(Color.red, Color.green, colorLerp);
+        Color newColor = Color.Lerp(Color.red, Color.green, colorLerp);
+        _spriteRenderer.color = newColor;
 
-        Debug.Log("all switches " +  flag);
+        _isOpen = flag;
     }
+
 }
