@@ -8,10 +8,14 @@ public class Bow : Weapon
     public float maxArrowForce = 30f;
     public float minArrowForce = 5f;
     public float maxChargeTime = 2f;
-    public float reloadTime = 1f; // time to reload after shooting
 
-    public Image chargeBarUI; // Unity UI Image (fill type: horizontal)
-    public Transform uiCanvasFollowTarget; // character's head, or bow position
+    public float reloadTime = 1f;
+    public Image reloadBarUI;
+    private float reloadTimer = 0f;
+
+
+    public Image chargeBarUI; 
+    public Transform uiCanvasFollowTarget; 
 
     private float chargeTime = 0f;
     private bool isCharging = false;
@@ -33,8 +37,16 @@ public class Bow : Weapon
             ReleaseArrow();
         }
 
+        if (isReloading)
+        {
+            reloadTimer += Time.deltaTime;
+            float reloadProgress = Mathf.Clamp01(reloadTimer / reloadTime);
+            reloadBarUI.fillAmount = reloadProgress;
+        }
+
         UpdateUIPosition();
     }
+
 
     private void StartCharging()
     {
@@ -55,6 +67,9 @@ public class Bow : Weapon
     {
         isCharging = false;
         isReloading = true;
+        reloadTimer = 0f; // reload sayacýný baþlat
+        reloadBarUI.fillAmount = 0f;
+        reloadBarUI.gameObject.SetActive(true);
         lastAttackTime = Time.time;
 
         float powerRatio = chargeTime / maxChargeTime;
@@ -63,18 +78,20 @@ public class Bow : Weapon
         GameObject arrow = Instantiate(arrowPrefab, shootPoint.position, Quaternion.identity);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
         Vector2 direction = transform.parent.right;
-        //arrow.transform.right = direction;
-        rb.AddForce(new Vector2(direction.x, direction.y + 0.5f) * arrowForce, ForceMode2D.Impulse);
-
+        rb.AddForce(new Vector2(direction.x, direction.y) * arrowForce, ForceMode2D.Impulse);
+        arrow.GetComponent<Arrow>().damage = damage;
 
         chargeBarUI.gameObject.SetActive(false);
         Invoke(nameof(Reload), reloadTime);
     }
 
+
     private void Reload()
     {
         isReloading = false;
+        reloadBarUI.gameObject.SetActive(false);
     }
+
 
     private void UpdateUIPosition()
     {
@@ -82,6 +99,12 @@ public class Bow : Weapon
         {
             Vector2 screenPos = Camera.main.WorldToScreenPoint(uiCanvasFollowTarget.position + Vector3.up * 1.5f);
             chargeBarUI.transform.position = screenPos;
+        }
+        if (uiCanvasFollowTarget != null)
+        {
+            Vector2 screenPos = Camera.main.WorldToScreenPoint(uiCanvasFollowTarget.position + Vector3.up * 1.5f);
+            chargeBarUI.transform.position = screenPos;
+            reloadBarUI.transform.position = screenPos + Vector2.down * 20f;
         }
     }
 

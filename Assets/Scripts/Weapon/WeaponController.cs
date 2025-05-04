@@ -2,14 +2,26 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public Transform hand;  // Ýlk silahýn transformu
-    public Transform characterBody; // Karakterin gövdesi (flip için kullanýlýr)
-
-
+    public Transform hand;
+    public Transform characterBody;
+    public Weapon[] weapons;
+    private int currentWeaponIndex = 0;
 
     void Update()
     {
         Aim();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ChangeWeapon(); 
+        }
+    }
+
+    void ChangeWeapon()
+    {
+        weapons[currentWeaponIndex].gameObject.SetActive(false);
+        currentWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
+        weapons[currentWeaponIndex].gameObject.SetActive(true);
     }
 
     void Aim()
@@ -18,16 +30,14 @@ public class WeaponController : MonoBehaviour
         Vector3 direction = mouseWorldPos - hand.position;
         direction.z = 0f;
 
-        // Açýyý hesapla
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Silahlarý döndür
+
         hand.rotation = Quaternion.Euler(0, 0, angle);
 
-        // Eðer fare sol taraftaysa, silahlarý aynala (scale ile)
         if (mouseWorldPos.x < characterBody.position.x)
         {
-            hand.localScale = new Vector3(1, -1, 1);  // Y ekseninde aynala
+            hand.localScale = new Vector3(1, -1, 1);
         }
         else
         {
