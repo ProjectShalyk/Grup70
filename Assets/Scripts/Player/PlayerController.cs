@@ -30,14 +30,6 @@ public partial class PlayerController : MonoBehaviour
 
     IInteractable currentInteractable;
 
-
-    [Header("Temp Universe Control")]
-    [SerializeField] private GameObject[] universes;
-    private UniverseController[] universeControllers;
-    int universeIndex = 0;
-    public Material dissolveMaterial;
-    float dissolveSpeed = 1f;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,15 +37,6 @@ public partial class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        universeControllers = new UniverseController[universes.Length];
-        for (int i = 0; i < universes.Length; i++)
-        {
-            universeControllers[i] = universes[i].GetComponent<UniverseController>();
-            if (i == 0)
-            {
-                StartCoroutine(universeControllers[i].UniverseFadeIn());
-            }
-        }
 
     }
 
@@ -63,18 +46,6 @@ public partial class PlayerController : MonoBehaviour
         InteractUpdate();
         MovementUpdate();
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(universeControllers[universeIndex].UniverseFadeOut());
-            universeIndex++;
-            if (universeIndex >= universes.Length)
-            {
-                universeIndex = 0;
-            }
-            StartCoroutine(universeControllers[universeIndex].UniverseFadeIn());
-            //universes[universeIndex].SetActive(true);
-
-        }
     }
 
     private void FixedUpdate()

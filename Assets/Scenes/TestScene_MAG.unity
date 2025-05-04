@@ -568,11 +568,6 @@ MonoBehaviour:
     m_Bits: 55
   coyoteTime: 0.2
   jumpBufferTime: 0.15
-  universes:
-  - {fileID: 403090217}
-  - {fileID: 2048271565}
-  - {fileID: 1384984178}
-  dissolveMaterial: {fileID: 2100000, guid: 9e45dbafb758cdd49a2c20ab58db75a1, type: 2}
 --- !u!4 &252946148
 Transform:
   m_ObjectHideFlags: 0
@@ -724,6 +719,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &265550229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265550231}
+  - component: {fileID: 265550230}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &265550230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265550229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4660c97b82de74cad0bbd86d4ff60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  universes:
+  - {fileID: 403090217}
+  - {fileID: 2048271565}
+  - {fileID: 1384984178}
+--- !u!4 &265550231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265550229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.016067, y: 4.4039097, z: -0.009928023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &268115570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,6 +3140,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1448717694}
   - {fileID: 1773400630}
+  - {fileID: 265550231}
   - {fileID: 252946148}
   - {fileID: 974688706}
   - {fileID: 403090218}
