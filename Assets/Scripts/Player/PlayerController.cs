@@ -28,6 +28,13 @@ public partial class PlayerController : MonoBehaviour
     private float bufferCounter;
     private bool isGrounded;
 
+    [Header("Sword")]
+    [SerializeField] private Animator swordAnimator;
+    [SerializeField] private Collider2D swordCollider;
+    private bool isAttacking = false;
+
+
+
     IInteractable currentInteractable;
 
     private void Awake()
@@ -37,7 +44,7 @@ public partial class PlayerController : MonoBehaviour
 
     private void Start()
     {
-
+        SwordStart();
     }
 
     private void Update()
