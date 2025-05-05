@@ -112,6 +112,7 @@ public class Enemy : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
             animator.Play("SwordSwing");
+            AudioManager.Instance.Play("SwordSwing", pitch: Random.Range(1, 1.4f), oneShot: true);
 
         Collider2D col = Physics2D.OverlapCircle(sword.position, attackRange, playerLayer);
         if (col != null)
