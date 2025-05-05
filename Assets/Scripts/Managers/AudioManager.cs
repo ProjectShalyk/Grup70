@@ -62,20 +62,18 @@ public class AudioManager : MonoBehaviour
         Sound s = GetSound(name);
         if (s != null)
         {
+            if (pitch != 1)
+            {
+                s.source.pitch = pitch;
+            }
+            if (oneShot)
+            {
+                s.source.PlayOneShot(s.source.clip);
+            }
+
             if (!s.source.isPlaying)
             {
-                if (pitch != 1)
-                {
-                    s.source.pitch = pitch;
-                }
-                if (oneShot)
-                {
-                    s.source.PlayOneShot(s.source.clip);
-                }
-                else
-                {
-                    s.source.Play();
-                }
+                s.source.Play();
             }
         }
         else

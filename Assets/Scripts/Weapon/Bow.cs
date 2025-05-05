@@ -75,6 +75,8 @@ public class Bow : Weapon
         float powerRatio = chargeTime / maxChargeTime;
         float arrowForce = Mathf.Lerp(minArrowForce, maxArrowForce, powerRatio);
 
+        AudioManager.Instance.Play("ArrowRelease", pitch: Random.Range(1, 1.4f));
+
         GameObject arrow = Instantiate(arrowPrefab, shootPoint.position, Quaternion.identity);
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
         Vector2 direction = transform.parent.right;

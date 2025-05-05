@@ -36,7 +36,7 @@ public class PortalDoor : InteractableObject
         }
         
         // Print all available tags in the project for debugging
-        Debug.Log("All available tags in project: " + string.Join(", ", UnityEditorInternal.InternalEditorUtility.tags));
+        //Debug.Log("All available tags in project: " + string.Join(", ", UnityEditorInternal.InternalEditorUtility.tags));
         
         // Print all objects in the current scene for debugging
         Debug.Log("--- All GameObjects in current scene ---");
