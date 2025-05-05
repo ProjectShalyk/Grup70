@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mythtiles_6
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 4466742325493308132, guid: 3258cd4953281fb479d76674be8df6e4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7843138, g: 0.35686275, b: 0.18823531, a: 1}
   m_Transform:
     e00: 1
     e01: 0
