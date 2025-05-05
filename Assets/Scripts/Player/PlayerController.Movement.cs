@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public partial class PlayerController
 {
@@ -28,14 +29,12 @@ public partial class PlayerController
 
     void MovementFixedUpdate()
     {
-        // ivmelenme
         float targetSpeed = moveInput * maxSpeed;
         float speedDiff = targetSpeed - rb.linearVelocity.x;
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, 0.9f) * Mathf.Sign(speedDiff);
         rb.AddForce(Vector2.right * movement);
 
-        // gravity
         if (rb.linearVelocity.y > 2f)
             rb.gravityScale = gravityScale;
         else if (rb.linearVelocity.y < -2f)
@@ -43,12 +42,33 @@ public partial class PlayerController
         else
             rb.gravityScale = apexGravityScale;
 
-        // jump
         if (jumpPressed)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpPressed = false;
         }
+
+        //FlipIfNeeded();
     }
+
+
+    void FlipIfNeeded()
+    {
+        if (moveInput > 0 && !facingRight)
+            Flip();
+        else if (moveInput < 0 && facingRight)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
 }

@@ -13,7 +13,7 @@ public class WeaponController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ChangeWeapon(); 
+            ChangeWeapon();
         }
     }
 
