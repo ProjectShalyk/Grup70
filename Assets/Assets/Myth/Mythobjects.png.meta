@@ -1,0 +1,1230 @@
+fileFormatVersion: 2
+guid: 956817ff955540b4ca5819d0fb99dc35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7753959951992221850
+    second: Mythobjects_0
+  - first:
+      213: 7779947129106795463
+    second: Mythobjects_1
+  - first:
+      213: 6876397477733077653
+    second: Mythobjects_2
+  - first:
+      213: 8035194540136123225
+    second: Mythobjects_3
+  - first:
+      213: 560665163029063033
+    second: Mythobjects_4
+  - first:
+      213: -4559894606443823385
+    second: Mythobjects_5
+  - first:
+      213: -3213059946786718715
+    second: Mythobjects_6
+  - first:
+      213: -3821526466773133216
+    second: Mythobjects_7
+  - first:
+      213: 4662730647129078320
+    second: Mythobjects_8
+  - first:
+      213: -6864638229963273474
+    second: Mythobjects_9
+  - first:
+      213: 8440114983865843632
+    second: Mythobjects_10
+  - first:
+      213: -6392501410422909645
+    second: Mythobjects_11
+  - first:
+      213: 2590695777685488867
+    second: Mythobjects_12
+  - first:
+      213: 2219815362624609478
+    second: Mythobjects_13
+  - first:
+      213: -6838223959647305397
+    second: Mythobjects_14
+  - first:
+      213: 6548064381509287289
+    second: Mythobjects_15
+  - first:
+      213: 6098793933417445099
+    second: Mythobjects_16
+  - first:
+      213: -7250658250394279134
+    second: Mythobjects_17
+  - first:
+      213: -3150861202304050737
+    second: Mythobjects_18
+  - first:
+      213: -4454217685510032556
+    second: Mythobjects_19
+  - first:
+      213: -3451381673260974608
+    second: Mythobjects_20
+  - first:
+      213: -2271308971688368819
+    second: Mythobjects_21
+  - first:
+      213: -8204818779486461561
+    second: Mythobjects_22
+  - first:
+      213: 2367309837042574246
+    second: Mythobjects_23
+  - first:
+      213: -6986278476788241523
+    second: Mythobjects_24
+  - first:
+      213: -7516902969081167298
+    second: Mythobjects_25
+  - first:
+      213: 8511694835966368841
+    second: Mythobjects_26
+  - first:
+      213: -7512553679523922530
+    second: Mythobjects_27
+  - first:
+      213: -4647452525389004990
+    second: Mythobjects_28
+  - first:
+      213: -2005536958350159241
+    second: Mythobjects_29
+  - first:
+      213: -8392159347702242949
+    second: Mythobjects_30
+  - first:
+      213: 562422469844003165
+    second: Mythobjects_31
+  - first:
+      213: -4062438455265631939
+    second: Mythobjects_32
+  - first:
+      213: -6096326744933450380
+    second: Mythobjects_33
+  - first:
+      213: 4534506219339530555
+    second: Mythobjects_34
+  - first:
+      213: 1629286462672828528
+    second: Mythobjects_35
+  - first:
+      213: 372959873818154447
+    second: Mythobjects_36
+  - first:
+      213: -4316462694436798124
+    second: Mythobjects_37
+  - first:
+      213: 7389562827893564865
+    second: Mythobjects_38
+  - first:
+      213: 9216890688939837343
+    second: Mythobjects_39
+  - first:
+      213: 253606808392499804
+    second: Mythobjects_40
+  - first:
+      213: -1712198471005637762
+    second: Mythobjects_41
+  - first:
+      213: -8438856884832213556
+    second: Mythobjects_42
+  - first:
+      213: -7830842404986662975
+    second: Mythobjects_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mythobjects_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f06e28186646490800000000000000
+      internalID: -7753959951992221850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 337
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb0bb9a1bce7fb60800000000000000
+      internalID: 7779947129106795463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 318
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5921ca2c21fdd6f50800000000000000
+      internalID: 6876397477733077653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 317
+        width: 103
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95bc8f9acdeb28f60800000000000000
+      internalID: 8035194540136123225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_4
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 318
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975a848cef1e7c700800000000000000
+      internalID: 560665163029063033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_5
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 287
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee32b9c30008b0c0800000000000000
+      internalID: -4559894606443823385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_6
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 317
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50cfdbd700be863d0800000000000000
+      internalID: -3213059946786718715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_7
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 317
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068db300de537fac0800000000000000
+      internalID: -3821526466773133216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_8
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 319
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ab471c1d855b040800000000000000
+      internalID: 4662730647129078320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_9
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 318
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa097776e7ebb0a0800000000000000
+      internalID: -6864638229963273474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf76c43cdf412570800000000000000
+      internalID: 8440114983865843632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 287
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3351f8d06d54947a0800000000000000
+      internalID: -6392501410422909645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_12
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 287
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e44c0e651004f320800000000000000
+      internalID: 2590695777685488867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_13
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 287
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccd13caf4e5ece10800000000000000
+      internalID: 2219815362624609478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_14
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 287
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4148a60a8fb911a0800000000000000
+      internalID: -6838223959647305397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 222
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dbf32acd56fda50800000000000000
+      internalID: 6548064381509287289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 285
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be677a705c443a450800000000000000
+      internalID: 6098793933417445099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_17
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 286
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2236e75acbc706b90800000000000000
+      internalID: -7250658250394279134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_18
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 286
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc95b143e64e544d0800000000000000
+      internalID: -3150861202304050737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_19
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 286
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45379ee4d907f22c0800000000000000
+      internalID: -4454217685510032556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_20
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 286
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd7cf487aa3a10d0800000000000000
+      internalID: -3451381673260974608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_21
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 286
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d456b5f2680ba70e0800000000000000
+      internalID: -2271308971688368819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_22
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 255
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78161428ac0a22e80800000000000000
+      internalID: -8204818779486461561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_23
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 235
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3e53611cf5ad020800000000000000
+      internalID: 2367309837042574246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_24
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 255
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b64118db0cb0f90800000000000000
+      internalID: -6986278476788241523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_25
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 221
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3286dc63989ea790800000000000000
+      internalID: -7516902969081167298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 255
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c5d4e3b5d9f1670800000000000000
+      internalID: 8511694835966368841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_27
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 256
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d3cef4b3c0eb790800000000000000
+      internalID: -7512553679523922530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_28
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 254
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f32b92d8ee08fb0800000000000000
+      internalID: -4647452525389004990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_29
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 253
+        width: 59
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7721f9d13c6ea24e0800000000000000
+      internalID: -2005536958350159241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_30
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 158
+        width: 159
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71ebbd698f098b80800000000000000
+      internalID: -8392159347702242949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_31
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 224
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59efb8a1402ec700800000000000000
+      internalID: 562422469844003165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_32
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 224
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d316108afb15f97c0800000000000000
+      internalID: -4062438455265631939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_33
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 223
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d378d002f756ba0800000000000000
+      internalID: -6096326744933450380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_34
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 221
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b314883b16dcdee30800000000000000
+      internalID: 4534506219339530555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_35
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 223
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07877fcc7636c9610800000000000000
+      internalID: 1629286462672828528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 191
+        width: 62
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5d76a77050d2500800000000000000
+      internalID: 372959873818154447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_37
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 199
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4518edb8c08d814c0800000000000000
+      internalID: -4316462694436798124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 197
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5e60a8d300d8660800000000000000
+      internalID: 7389562827893564865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_39
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 160
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f974dd79f39f8ef70800000000000000
+      internalID: 9216890688939837343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_40
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 159
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c520bde6c0ef48300800000000000000
+      internalID: 253606808392499804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_41
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 160
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73fdbeef8c0d38e0800000000000000
+      internalID: -1712198471005637762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_42
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 160
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5673dcf5823ea80800000000000000
+      internalID: -8438856884832213556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mythobjects_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 97
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf44be7252435390800000000000000
+      internalID: -7830842404986662975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
