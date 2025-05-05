@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class UniverseController : MonoBehaviour
 {
     public List<SpriteRenderer> sprites = new List<SpriteRenderer>();
+    public List<TilemapRenderer> tilemaps = new List<TilemapRenderer>();
     public Material dissolveMaterial;
+    public int index;
 
     private void Awake()
     {
@@ -18,6 +21,15 @@ public class UniverseController : MonoBehaviour
             sprite.material.SetTexture("_MainTex", sprite.sprite.texture);
             sprite.material.SetFloat("_dissolveAmount", -0.2f);
         }
+
+        tilemaps = GetComponentsInChildren<TilemapRenderer>().ToList<TilemapRenderer>();
+
+        foreach (TilemapRenderer tiles in tilemaps)
+        {
+            tiles.material = dissolveMaterial;
+            //tiles.material.SetTexture("_MainTex", tiles.sprite.texture);
+            tiles.material.SetFloat("_dissolveAmount", -0.2f);
+        }
     }
     void Start()
     {
@@ -28,8 +40,16 @@ public class UniverseController : MonoBehaviour
     {
         foreach (SpriteRenderer sprite in sprites)
         {
+            if (sprite == null) continue;
             sprite.material.SetFloat("_dissolveAmount", 1f);
             StartCoroutine(FadeTo(-0.2f, sprite.material));
+        }
+
+        foreach (TilemapRenderer tilse in tilemaps)
+        {
+            if (tilse == null) continue;
+            tilse.material.SetFloat("_dissolveAmount", 1f);
+            StartCoroutine(FadeTo(-0.2f, tilse.material));
         }
 
         yield return new WaitForSeconds(0.85f);
@@ -42,8 +62,16 @@ public class UniverseController : MonoBehaviour
 
         foreach (SpriteRenderer sprite in sprites)
         {
+            if (sprite == null) continue;
             sprite.material.SetFloat("_dissolveAmount", -0.2f);
             StartCoroutine(FadeTo(1f, sprite.material));
+        }
+
+        foreach (TilemapRenderer tiles in tilemaps)
+        {
+            if (tiles == null) continue;
+            tiles.material.SetFloat("_dissolveAmount", -0.2f);
+            StartCoroutine(FadeTo(1f, tiles.material));
         }
 
         yield return new WaitForSeconds(0.5f);

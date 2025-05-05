@@ -16,6 +16,7 @@ public partial class PlayerController
 
         if (isGrounded)
         {
+            animator.SetTrigger("landed");
             AudioManager.Instance.Stop("Jump");
             coyoteCounter = coyoteTime;
         }
@@ -37,10 +38,12 @@ public partial class PlayerController
         if (targetSpeed != 0 && isGrounded)
         {
             AudioManager.Instance.Play("Run");
+            animator.SetBool("running", true);
         }
         else
         {
             AudioManager.Instance.Stop("Run");
+            animator.SetBool("running", false);
         }
 
         float speedDiff = targetSpeed - rb.linearVelocity.x;
@@ -59,12 +62,13 @@ public partial class PlayerController
         if (jumpPressed)
         {
             AudioManager.Instance.Play("Jump");
+            animator.SetTrigger("jump");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpPressed = false;
         }
 
-        //FlipIfNeeded();
+        FlipIfNeeded();
     }
 
 
@@ -81,9 +85,15 @@ public partial class PlayerController
     void Flip()
     {
         facingRight = !facingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = !transform.GetChild(0).GetComponent<SpriteRenderer>().flipX;
     }
+
+    //void Flip()
+    //{
+    //    facingRight = !facingRight;
+    //    Vector3 scale = transform.localScale;
+    //    scale.x *= -1;
+    //    transform.localScale = scale;
+    //}
 
 }

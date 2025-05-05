@@ -34,11 +34,12 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponentInChildren<Animator>();
+        animator = transform.GetChild(1).GetComponent<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         nextPatrolPoint = pointB.position;
         currentHealth = maxHealth;
 
+        player = CheckpointManager.Instance.player.transform;
         playerComponent = player.GetComponent<PlayerController>();
     }
 
@@ -163,6 +164,7 @@ public class Enemy : MonoBehaviour
 
             if (dissolveAmount <= -0.2f)
             {
+                GetComponentInParent<UniverseController>().sprites.Remove(GetComponentInChildren<SpriteRenderer>());
                 Destroy(gameObject);
             }
         }

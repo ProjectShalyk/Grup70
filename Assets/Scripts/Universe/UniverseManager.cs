@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class UniverseManager : MonoBehaviour
@@ -27,6 +28,7 @@ public class UniverseManager : MonoBehaviour
         for (int i = 0; i < universes.Length; i++)
         {
             universeControllers[i] = universes[i].GetComponent<UniverseController>();
+            universeControllers[i].index = i;
             if (i == 0)
             {
                 StartCoroutine(universeControllers[i].UniverseFadeIn());
@@ -36,10 +38,10 @@ public class UniverseManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) // geçici
-        {
-            ChangeUniverse();
-        }
+        //if (Input.GetKeyDown(KeyCode.R)) // geçici
+        //{
+        //    ChangeUniverse();
+        //}
     }
 
     public void ChangeUniverse()
@@ -53,4 +55,25 @@ public class UniverseManager : MonoBehaviour
         StartCoroutine(universeControllers[universeIndex].UniverseFadeIn());
         //universes[universeIndex].SetActive(true);
     }
+
+    public void ChangeUniverseByIndex(int index)
+    {
+        if (index < 0 || index >= universes.Length)
+        {
+            Debug.LogWarning("ChangeUniverseByIndex: Invalid index " + index);
+            return;
+        }
+
+        StartCoroutine(ChangeUniverseCoroutine(index));
+    }
+
+    private IEnumerator ChangeUniverseCoroutine(int newIndex)
+    {
+        yield return StartCoroutine(universeControllers[universeIndex].UniverseFadeOut());
+
+        universeIndex = newIndex;
+
+        yield return StartCoroutine(universeControllers[universeIndex].UniverseFadeIn());
+    }
+
 }

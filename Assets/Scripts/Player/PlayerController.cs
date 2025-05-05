@@ -42,6 +42,8 @@ public partial class PlayerController : MonoBehaviour
     public bool isRespawning = false;
     float respawnDissolveAmount = -0.2f;
 
+    Animator animator;
+
     IInteractable currentInteractable;
     CheckpointManager checkpointManager;
 
@@ -54,6 +56,7 @@ public partial class PlayerController : MonoBehaviour
     {
         checkpointManager = CheckpointManager.Instance;
         CombatStart();
+        animator = GetComponentInChildren<Animator>();
         hand = GetComponentInChildren<WeaponController>().hand;
     }
 
