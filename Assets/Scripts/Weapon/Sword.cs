@@ -22,13 +22,11 @@ public class Sword : Weapon
     {
         lastAttackTime = Time.time;
         animator.Play("SwordSwing");
-        Debug.Log("Sword slashed!");
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().GetDamage(damage);
-            //Debug.Log($"Hit {enemy.name} for {damage} damage");
         }
     }
 

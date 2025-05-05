@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public Transform pointB;
     public Transform player;
     public Transform sword;
+    public float damage = 10f;
 
     public float speed = 2f;
     public float attackRange = 1f;
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public LayerMask playerLayer;
 
     void Start()
     {
@@ -45,6 +47,9 @@ public class Enemy : MonoBehaviour
             UpdateDissolveEffect();
             return;
         }
+
+        if (player == null)
+            return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         bool playerInPatrolZone = IsPlayerBetweenPoints();
@@ -95,7 +100,13 @@ public class Enemy : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
             animator.Play("SwordSwing");
-        // damage player (implement elsewhere)
+
+        Collider2D col = Physics2D.OverlapCircle(sword.position, attackRange, playerLayer);
+        if (col != null)
+        {
+            PlayerController playerController = col.GetComponent<PlayerController>();
+            playerController.GetDamage(damage);
+        }
     }
 
     public void GetDamage(float amount)

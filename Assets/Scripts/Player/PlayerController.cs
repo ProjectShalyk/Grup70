@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 public partial class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float maxSpeed = 8f;
     [SerializeField] private float acceleration = 50f;
     [SerializeField] private float deceleration = 70f;
+    bool facingRight = true;
+    Transform hand;
+
 
     [Header("Jump")]
     [SerializeField] private float jumpForce = 15f;
@@ -28,12 +32,13 @@ public partial class PlayerController : MonoBehaviour
     private float bufferCounter;
     private bool isGrounded;
 
-    [Header("Sword")]
-    [SerializeField] private Animator swordAnimator;
-    [SerializeField] private Collider2D swordCollider;
-    private bool isAttacking = false;
-
-
+    [Header("Combat")]
+    public float maxHealth = 100f;
+    private float currentHealth;
+    public Image healthBarImage;
+    bool isDead = false;
+    SpriteRenderer spriteRenderer;
+    float dissolveAmount = 1f;
 
     IInteractable currentInteractable;
 
@@ -44,7 +49,8 @@ public partial class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        SwordStart();
+        CombatStart();
+        hand = GetComponentInChildren<WeaponController>().hand;
     }
 
     private void Update()
@@ -52,6 +58,7 @@ public partial class PlayerController : MonoBehaviour
 
         InteractUpdate();
         MovementUpdate();
+        CombatUpdate();
 
     }
 
