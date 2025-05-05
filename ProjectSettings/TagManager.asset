@@ -8,6 +8,7 @@ TagManager:
   - MapLayerSecondary
   - MapLayerThird
   - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player
   - Enemy
   - Arrow
-  - 
+  - BulletProof
   - 
   - 
   - 

@@ -22,6 +22,11 @@ public partial class PlayerController
             inteactable.OnAreaEnter();
             currentInteractable = inteactable;
         }
+
+        if (collision.CompareTag("Checkpoint"))
+        {
+            checkpointManager.SetCheckpoint(collision.gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

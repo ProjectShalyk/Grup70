@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     public LayerMask playerLayer;
+    private PlayerController playerComponent;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
         nextPatrolPoint = pointB.position;
         currentHealth = maxHealth;
 
+        playerComponent = player.GetComponent<PlayerController>();
     }
 
     void Update()
@@ -72,6 +74,8 @@ public class Enemy : MonoBehaviour
         direction = direction.normalized;
         rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
 
+        FaceTarget(nextPatrolPoint);
+
         if (Vector2.Distance(transform.position, nextPatrolPoint) < 0.2f)
         {
             nextPatrolPoint = (nextPatrolPoint == pointA.position) ? pointB.position : pointA.position;
@@ -80,10 +84,18 @@ public class Enemy : MonoBehaviour
 
     void ChasePlayer()
     {
+        if (playerComponent.isDead)
+        {
+            isChasing = false;
+            return;
+        }
+
         Vector2 direction = (player.position - transform.position);
         direction.y = 0;
         direction = direction.normalized;
         rb.linearVelocity = new Vector2(direction.x * speed, rb.linearVelocity.y);
+
+        FaceTarget(player.position);
 
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
@@ -168,4 +180,13 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(sword.position, attackRange);
     }
+
+    void FaceTarget(Vector3 targetPosition)
+    {
+        if (targetPosition.x < transform.position.x)
+            transform.localScale = new Vector3(-1f, 1f, 1f); // sola dön
+        else
+            transform.localScale = new Vector3(1f, 1f, 1f);  // saða dön
+    }
+
 }

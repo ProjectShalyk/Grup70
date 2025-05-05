@@ -22,6 +22,7 @@ public class Sword : Weapon
     {
         lastAttackTime = Time.time;
         animator.Play("SwordSwing");
+        AudioManager.Instance.Play("SwordSwing", pitch: Random.Range(1, 1.4f));
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)

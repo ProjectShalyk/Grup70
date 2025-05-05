@@ -50,13 +50,18 @@ public class Arrow : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
             transform.SetParent(collision.transform, true);
 
+            UniverseController universeController = collision.transform.GetComponentInParent<UniverseController>();
+            universeController.sprites.Add(GetComponentInChildren<SpriteRenderer>());
+
             Enemy enemyComp = collision.GetComponent<Enemy>();
             enemyComp.GetDamage(damage);
         }
         else
         {
             rb.bodyType = RigidbodyType2D.Static;
-            transform.SetParent(collision.transform.GetComponentInParent<UniverseController>().transform, true);
+            UniverseController universeController = collision.transform.GetComponentInParent<UniverseController>();
+            universeController.sprites.Add(GetComponentInChildren<SpriteRenderer>());
+            transform.SetParent(universeController.transform, true);
         }
 
     }

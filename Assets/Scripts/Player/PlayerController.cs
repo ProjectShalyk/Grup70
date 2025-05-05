@@ -36,11 +36,14 @@ public partial class PlayerController : MonoBehaviour
     public float maxHealth = 100f;
     private float currentHealth;
     public Image healthBarImage;
-    bool isDead = false;
+    public bool isDead = false;
     SpriteRenderer spriteRenderer;
     float dissolveAmount = 1f;
+    public bool isRespawning = false;
+    float respawnDissolveAmount = -0.2f;
 
     IInteractable currentInteractable;
+    CheckpointManager checkpointManager;
 
     private void Awake()
     {
@@ -49,6 +52,7 @@ public partial class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        checkpointManager = CheckpointManager.Instance;
         CombatStart();
         hand = GetComponentInChildren<WeaponController>().hand;
     }

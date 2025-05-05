@@ -1,18 +1,21 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UniverseController : MonoBehaviour
 {
-    public SpriteRenderer[] sprites;
+    public List<SpriteRenderer> sprites = new List<SpriteRenderer>();
     public Material dissolveMaterial;
 
     private void Awake()
     {
-        sprites = GetComponentsInChildren<SpriteRenderer>();
+        sprites = GetComponentsInChildren<SpriteRenderer>().ToList<SpriteRenderer>();
 
         foreach (SpriteRenderer sprite in sprites)
         {
             sprite.material = dissolveMaterial;
+            sprite.material.SetTexture("_MainTex", sprite.sprite.texture);
             sprite.material.SetFloat("_dissolveAmount", -0.2f);
         }
     }
@@ -57,6 +60,14 @@ public class UniverseController : MonoBehaviour
             mat.SetFloat("_dissolveAmount", currentValue);
             yield return null;
         }
+    }
+
+    public void AddNewSprite(SpriteRenderer sprite)
+    {
+        sprites.Add(sprite);
+        sprite.material = dissolveMaterial;
+        sprite.material.SetTexture("_MainTex", sprite.sprite.texture);
+        sprite.material.SetFloat("_dissolveAmount", 1f);
     }
 
 }

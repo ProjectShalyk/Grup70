@@ -12,10 +12,56 @@ public partial class PlayerController
     {
         if (isDead)
         {
-            UpdateDissolveEffect();
+            if (!isRespawning)
+            {
+                UpdateDissolveEffect(); // dissolve out
+            }
+            else
+            {
+                UpdateRespawnEffect(); // dissolve in
+            }
+
             return;
         }
+
+        // normal update kodlarýn buraya gelir
     }
+
+    public void StartRespawn()
+    {
+        isRespawning = true;
+        dissolveAmount = -0.2f;
+        transform.position = checkpointManager.GetLastCheckpoint().transform.position;
+
+        spriteRenderer.material.SetFloat("_dissolveAmount", dissolveAmount);
+
+        // Oyuncuyu tekrar aktif hale getir
+        GetComponent<Collider2D>().enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.linearVelocity = Vector2.zero;
+    }
+    void UpdateRespawnEffect()
+    {
+        if (spriteRenderer != null && spriteRenderer.material.HasProperty("_dissolveAmount"))
+        {
+            dissolveAmount += Time.deltaTime * 1.5f;
+            spriteRenderer.material.SetFloat("_dissolveAmount", dissolveAmount);
+
+            if (dissolveAmount >= 1f)
+            {
+                FinishRespawn();
+            }
+        }
+    }
+
+    void FinishRespawn()
+    {
+        isDead = false;
+        isRespawning = false;
+        currentHealth = maxHealth;
+        UpdateHealthBar();
+    }
+
 
     public void GetDamage(float amount)
     {
@@ -55,9 +101,10 @@ public partial class PlayerController
             dissolveAmount -= Time.deltaTime * 1.5f; // speed of dissolve
             spriteRenderer.material.SetFloat("_dissolveAmount", dissolveAmount);
 
-            if (dissolveAmount <= -0.2f)
+            if (dissolveAmount < -0.2f)
             {
-                Destroy(gameObject);
+                spriteRenderer.material.SetFloat("_dissolveAmount", -0.2f);
+                checkpointManager.SetPLayerFalse();
             }
         }
     }

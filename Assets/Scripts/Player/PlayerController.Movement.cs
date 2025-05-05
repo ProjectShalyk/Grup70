@@ -15,7 +15,10 @@ public partial class PlayerController
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (isGrounded)
+        {
+            AudioManager.Instance.Stop("Jump");
             coyoteCounter = coyoteTime;
+        }
         else
             coyoteCounter -= Time.deltaTime;
 
@@ -30,10 +33,21 @@ public partial class PlayerController
     void MovementFixedUpdate()
     {
         float targetSpeed = moveInput * maxSpeed;
+
+        if (targetSpeed != 0 && isGrounded)
+        {
+            AudioManager.Instance.Play("Run");
+        }
+        else
+        {
+            AudioManager.Instance.Stop("Run");
+        }
+
         float speedDiff = targetSpeed - rb.linearVelocity.x;
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, 0.9f) * Mathf.Sign(speedDiff);
         rb.AddForce(Vector2.right * movement);
+
 
         if (rb.linearVelocity.y > 2f)
             rb.gravityScale = gravityScale;
@@ -44,6 +58,7 @@ public partial class PlayerController
 
         if (jumpPressed)
         {
+            AudioManager.Instance.Play("Jump");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpPressed = false;
